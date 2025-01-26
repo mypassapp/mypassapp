@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="MyPass">
+    <meta property="og:description" content="Welcome to MyPass, the Windows 7 recreation that aims to be 1:1.">
+    <meta property="og:image" content="https://classic7.lol/Assets/Icons/favicon.png">
+    <meta property="og:url" content="https://classic7.lol">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MyPass">    
+    <title>MyPass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Assets/Logos/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar-container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="Assets/Logos/logo.png" alt="MyPass Logo">
+        </div>
+            <div class="links">
+                <div class="link"><a data-target="page1">Home</a></div>
+                <div class="link"><a data-target="page2">Download</a></div>
+                <div class="link"><a data-target="page3">FAQ</a></div>
+                <div class="link"><a data-target="page4">Contact</a></div>
+                <div class="image-links">
+                    <a href="https://github.com/mypassapp/mypassapp" class="img-link"><img src="Assets/Icons/github.svg"></a>
+                    <a href="https://t.me/mypassapp" class="img-link"><img src="Assets/Icons/discord.svg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div id="page1" class="content active">
+            <div class="text-container">
+                <h2>Welcome to MyPass</h2>
+                <p>Revived security.</p>
+            </div>
+            <p>MyPass is a password manager made by some 14 year old (me).</p>
+            <p style="opacity: 0.65;">Keep in mind MyPass is made by a *kid*, i accept critisisem at my <a style="color: rgb(0, 30, 255);" href="https://t.me/mypassapp">Telegram</a> channel.</p>
+            <a class="download-button" href="https://drive.google.com/uc?export=download&id=163OIlRuWEDXEgnTmEF_gtydUuYuApgg9">Download (1.0.1)</a>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="Assets/Icons/computer.ico" alt="Computer Icon">
+                    <h3>Your passwords, secured.</h3>
+                    <p>Experience a new wave of safety and security with MyPass.</p>
+                </div>
+                <div class="card">
+                    <img src="Assets/Icons/desktop.ico" alt="Desktop Icon">
+                    <h3><i>Has a Password Generator</i></h3>
+                    <p>MyPass has a password generator when you end up in a situation i always end up in.</p>
+                </div>
+                <div class="card">
+                    <img src="Assets/Icons/explorer.ico" alt="Explorer Icon">
+                    <h3>User friendly</h3>
+                    <p>Writen with python, has a UI full of ❤️.</p>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="content">
+            <div class="text-container">
+                <h2>Downloads</h2>
+                <p>Latest version: 1.0.1</p>
+            </div>
+            <p>Download MyPass from my drive!</p>
+            <a class="download-button" href="https://drive.google.com/uc?export=download&id=163OIlRuWEDXEgnTmEF_gtydUuYuApgg9">Download (1.0.1)</a>
+
+        </div>
+        <div id="page3" class="content">
+            <div class="text-container">
+                <h2>FAQ</h2>
+                <p>Some FAQ, idc.</p>
+            </div>
+            <h1 id="classic-7-faq">MyPass&#39;s FAQ</h1>
+            <ul>
+              <li>&quot;can i use MyPass as a reliable password manager??&quot; <ul>
+                  <li>its still in pre alpha, ill be happy if you test out and support me so i can make it the best out there.</li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+        <div id="page4" class="content">
+            <div class="text-container">
+                <h2>Contact</h2>
+                <p>Get in touch with us</p>
+            </div>
+            <p>For any inquiries or support, please contact us via our <a style="color: rgb(0, 25, 250);" href="https://t.me/mypassapp">Telegram</a> channel.</p>
+            <p style="opacity: 0.5;">You currently have no other way to contact us.</p>
+        </div>
+        <div class="footer-links">
+            <p>This project is in pre alpha, expect bugs and errors and also advanced installer tried to rip me off and the app has smth where it throughs a tantrum but just pass it..</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.link a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetId = link.getAttribute('data-target');
+    
+                document.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('active');
+                });
+    
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    
+        document.querySelectorAll('.content').forEach(content => {
+            if (content.id !== 'page1') content.classList.remove('active');
+        });
+    </script>    
+</body>
+</html>
